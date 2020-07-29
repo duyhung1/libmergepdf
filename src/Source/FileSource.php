@@ -17,7 +17,7 @@ final class FileSource implements SourceInterface
      * @var string
      */
     private $filename;
-
+    private $degrees;
     /**
      * @var PagesInterface
      */
@@ -31,7 +31,9 @@ final class FileSource implements SourceInterface
 
         $this->filename = $filename;
         $this->pages = $pages ?: new Pages;
+        $this->degrees = $degrees;
     }
+    
 
     public function getName(): string
     {

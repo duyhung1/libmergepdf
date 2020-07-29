@@ -45,7 +45,7 @@ final class Merger
      */
     public function addFile(string $filename, PagesInterface $pages = null, int $degrees = 0): void
     {
-        $this->sources[] = new FileSource($filename, $pages);
+        $this->sources[] = new FileSource($filename, $pages,$degrees);
     }
 
     /**
