@@ -38,7 +38,7 @@ final class TcpdiDriver implements DriverInterface
                     $tcpdi->SetPrintFooter(false);
                     $tcpdi->AddPage(
                         $size['w'] > $size['h'] ? 'L' : 'P',
-                        [$size['w'], $size['h']]
+                        [$size['w'], $size['h'],"Rotate" => $source->getDegrees()]
                     );
                     $tcpdi->useTemplate($template);
                 }

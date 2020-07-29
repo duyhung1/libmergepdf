@@ -22,4 +22,8 @@ interface SourceInterface
      * Get pages to fetch from source
      */
     public function getPages(): PagesInterface;
+      /**
+     * Get DEGREES
+     */
+    public function getDegrees(): int;
 }

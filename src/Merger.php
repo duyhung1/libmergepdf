@@ -43,7 +43,7 @@ final class Merger
     /**
      * Add PDF from file
      */
-    public function addFile(string $filename, PagesInterface $pages = null): void
+    public function addFile(string $filename, PagesInterface $pages = null, int $degrees = 0): void
     {
         $this->sources[] = new FileSource($filename, $pages);
     }

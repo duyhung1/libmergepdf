@@ -23,7 +23,7 @@ final class FileSource implements SourceInterface
      */
     private $pages;
 
-    public function __construct(string $filename, PagesInterface $pages = null)
+    public function __construct(string $filename, PagesInterface $pages = null,int $degrees = 0)
     {
         if (!is_file($filename) || !is_readable($filename)) {
             throw new Exception("Invalid file '$filename'");
@@ -46,5 +46,9 @@ final class FileSource implements SourceInterface
     public function getPages(): PagesInterface
     {
         return $this->pages;
+    }
+    public function getDegrees(): int
+    {
+        return $this->degrees;
     }
 }
